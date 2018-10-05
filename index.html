@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="test"></h1>
+
+    <button onclick="buttonSwitch()" style="background: #000000 url(index_res/bluebutton.png); padding: 21.7em 40.6em"></button>
+
+<script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+<script>
+    
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyApgymNEq-yrK1wMRzZY7bsPk11MM4RygU",
+    authDomain: "redvsblue-8a3b5.firebaseapp.com",
+    databaseURL: "https://redvsblue-8a3b5.firebaseio.com",
+    projectId: "redvsblue-8a3b5",
+    storageBucket: "redvsblue-8a3b5.appspot.com",
+    messagingSenderId: "779930491491"
+  };
+  firebase.initializeApp(config);
+
+  var test = document.getElementById('test');
+  var dbRef = firebase.database().ref().child('text');
+  // dbRef.on('value', snap => test.innerText = snap.val());
+  document.cookie = "username=John Doe; expires=Thu, 18 Dec 2018 12:00:00 UTC; path=/";
+  var decodedCookie = document.cookie;
+  test.innerText = decodedCookie;
+  
+
+</script>
+</body>
+</html>
